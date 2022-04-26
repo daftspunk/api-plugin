@@ -1,4 +1,4 @@
-<?php namespace Api\Facades;
+<?php namespace RainLab\Api\Facades;
 
 use October\Rain\Support\Facade;
 

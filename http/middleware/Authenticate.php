@@ -1,4 +1,4 @@
-<?php namespace Api\Http\Middleware;
+<?php namespace RainLab\Api\Http\Middleware;
 
 use Closure;
 use Illuminate\Auth\AuthenticationException;

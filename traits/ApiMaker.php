@@ -1,4 +1,4 @@
-<?php namespace Api\Traits;
+<?php namespace RainLab\Api\Traits;
 
 trait ApiMaker
 {

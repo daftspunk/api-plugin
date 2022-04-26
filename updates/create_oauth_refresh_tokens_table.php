@@ -1,10 +1,10 @@
 <?php
 
-use October\Rain\Support\Facades\Schema;
+use Schema;
 use October\Rain\Database\Schema\Blueprint;
 use October\Rain\Database\Updates\Migration;
 
-class CreateOauthAuthCodesTable extends Migration
+class CreateOauthRefreshTokensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateOauthAuthCodesTable extends Migration
      */
     public function up()
     {
-        Schema::create('oauth_auth_codes', function (Blueprint $table) {
+        Schema::create('oauth_refresh_tokens', function (Blueprint $table) {
             $table->string('id', 100)->primary();
-            $table->unsignedBigInteger('user_id')->index();
-            $table->unsignedBigInteger('client_id');
-            $table->text('scopes')->nullable();
+            $table->string('access_token_id', 100)->index();
             $table->boolean('revoked');
             $table->dateTime('expires_at')->nullable();
         });
@@ -30,6 +28,6 @@ class CreateOauthAuthCodesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('oauth_auth_codes');
+        Schema::dropIfExists('oauth_refresh_tokens');
     }
 }

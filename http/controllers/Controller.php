@@ -1,4 +1,4 @@
-<?php namespace Api\Http\Controllers;
+<?php namespace RainLab\Api\Http\Controllers;
 
 use Illuminate\Validation\Validator;
 use Illuminate\Routing\Controller as BaseController;

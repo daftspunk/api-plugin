@@ -1,7 +1,7 @@
-<?php namespace Api\Extend;
+<?php namespace RainLab\Api\Extend;
 
 use Backend\Models\User;
-use Api\Behaviors\HasApiTokens;
+use RainLab\Api\Behaviors\HasApiTokens;
 
 class BackendUser
 {

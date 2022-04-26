@@ -1,4 +1,4 @@
-<?php namespace Api;
+<?php namespace RainLab\Api;
 
 use Route;
 

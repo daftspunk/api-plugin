@@ -1,16 +1,16 @@
-<?php namespace Api;
+<?php namespace RainLab\Api;
 
 use App;
 use Event;
 use BackendAuth;
-use Api\Classes\ApiManager;
+use RainLab\Api\Classes\ApiManager;
 use Laravel\Passport\Passport;
-use Api\Console\InstallApiModule;
-use Api\Http\Middleware\Authenticate;
-use October\Rain\Support\ModuleServiceProvider;
-use Api\Extend\BackendUser as ExtendBackendUser;
+use RainLab\Api\Console\InstallApiModule;
+use RainLab\Api\Http\Middleware\Authenticate;
+use RainLab\Api\Extend\BackendUser as ExtendBackendUser;
+use System\Classes\PluginBase;
 
-class ServiceProvider extends ModuleServiceProvider
+class Plugin extends PluginBase
 {
     protected array $middlewareAliases = [
         'auth' => Authenticate::class,
@@ -75,7 +75,7 @@ class ServiceProvider extends ModuleServiceProvider
         }
 
         if ($authManager) {
-            $this->app->bind('Illuminate\Contracts\Auth\Factory', function () use ($authManager) {
+            $this->app->bind(\Illuminate\Contracts\Auth\Factory::class, function () use ($authManager) {
                 return $authManager;
             });
         }
@@ -91,8 +91,8 @@ class ServiceProvider extends ModuleServiceProvider
 
     protected function registerProviders()
     {
-        $this->app->register('\Laravel\Passport\PassportServiceProvider');
-        $this->app->register('\Illuminate\Auth\AuthServiceProvider');
+        $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
+        $this->app->register(\Illuminate\Auth\AuthServiceProvider::class);
     }
 
     protected function registerConsole()

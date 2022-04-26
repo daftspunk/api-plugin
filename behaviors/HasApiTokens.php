@@ -1,4 +1,4 @@
-<?php namespace Api\Behaviors;
+<?php namespace RainLab\Api\Behaviors;
 
 use Laravel\Passport\Token;
 use Laravel\Passport\Client;

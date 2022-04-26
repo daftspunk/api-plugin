@@ -1,4 +1,4 @@
-<?php namespace Api\Console;
+<?php namespace RainLab\Api\Console;
 
 use Artisan;
 use Illuminate\Console\Command;

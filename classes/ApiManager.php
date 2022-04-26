@@ -1,4 +1,4 @@
-<?php namespace Api\Classes;
+<?php namespace RainLab\Api\Classes;
 
 use System\Classes\PluginManager;
 use October\Rain\Support\Traits\Singleton;
