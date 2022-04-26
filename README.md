@@ -1,4 +1,4 @@
-# API module for October CMS
+# API Plugin for October CMS
 
 ## Installation
 
@@ -13,6 +13,7 @@
 ### Registering resources
 
 You can register resources for your plugin by using the `registerApiResources` method in your `Plugin.php` file.
+
 ```php
 public function registerApiResources()
 {

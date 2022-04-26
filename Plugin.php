@@ -6,7 +6,7 @@ use BackendAuth;
 use RainLab\Api\Classes\ApiManager;
 use Laravel\Passport\Passport;
 use RainLab\Api\Console\InstallApiModule;
-use RainLab\Api\Http\Middleware\Authenticate;
+use RainLab\Api\Middleware\Authenticate;
 use RainLab\Api\Extend\BackendUser as ExtendBackendUser;
 use System\Classes\PluginBase;
 

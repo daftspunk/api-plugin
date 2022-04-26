@@ -8,9 +8,7 @@ class BackendUser
     public function subscribe()
     {
         User::extend(function ($user) {
-            $implements = $user->implements;
-            $implements[] = HasApiTokens::class;
-            $user->implement = $implements;
+            $user->implementClassWith(HasApiTokens::class);
 
             $user->addDynamicMethod('can', function ($scope) use ($user) {
                 $groups = $user->groups()

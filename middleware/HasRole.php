@@ -1,4 +1,4 @@
-<?php namespace RainLab\Api\Http\Middleware;
+<?php namespace RainLab\Api\Middleware;
 
 use Closure;
 

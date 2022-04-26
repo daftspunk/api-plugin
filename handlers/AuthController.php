@@ -1,4 +1,4 @@
-<?php namespace RainLab\Api\Http\Controllers;
+<?php namespace RainLab\Handlers\Controllers;
 
 use Hash;
 use Backend\Models\User;
